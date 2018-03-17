@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="@dimen/taskPadding">
+
+    <LinearLayout
+        android:id="@+id/layout_task_labels"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/task_layout_labels_marginRight"
+        android:layout_marginRight="@dimen/task_layout_labels_marginRight"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/label_task_type"
+            style="@style/LabelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_task_type" />
+
+        <TextView
+            android:id="@+id/label_task_title"
+            style="@style/LabelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/task_label_marginTop"
+            android:text="@string/label_task_title" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_task_inputs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/layout_task_labels"
+        android:layout_toRightOf="@+id/layout_task_labels"
+        android:orientation="vertical">
+
+        <Spinner
+            android:id="@+id/spinner_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/spinner_task_types"
+            tools:listitem="@layout/layout_spinner_type"/>
+
+        <EditText
+            android:id="@+id/et_task_title"
+            style="@style/InputsTaskEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/task_input_marginTop"
+            android:background="@drawable/inputs_box"
+            android:hint="@string/hint_task_add_title" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/task_underline_height"
+        android:layout_below="@+id/layout_task_inputs"
+        android:layout_marginTop="@dimen/task_underline_marginTop"
+        android:background="@android:color/black" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout_content_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_task_inputs"
+        android:layout_marginTop="@dimen/task_content_marginTop" />
+
+</RelativeLayout>

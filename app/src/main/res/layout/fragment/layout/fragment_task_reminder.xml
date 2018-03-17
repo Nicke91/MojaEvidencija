@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginTop="@dimen/fragments_marginTop"
+    android:scrollbars="vertical">
+
+    <RelativeLayout
+        android:id="@+id/layout_isChecked_switch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/LabelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_toLeftOf="@+id/btn_remainder_show_date_switch"
+            android:layout_toStartOf="@+id/btn_remainder_show_date_switch"
+            android:text="@string/fragment_task_remainder_switch_label" />
+
+        <Switch
+            android:id="@+id/btn_remainder_show_date_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:checked="false" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/remainder_layout_content_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_isChecked_switch"
+        android:layout_marginTop="@dimen/reminder_layout_content_marginTop"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/reminder_layout_items_marginTop">
+
+            <TextView
+                android:id="@+id/reminder_tv_label_description"
+                style="@style/LabelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/reminder_label_description_marginRight"
+                android:layout_marginEnd="@dimen/reminder_label_description_marginRight"
+                android:text="@string/fragment_reminder_tv_label_description"/>
+
+            <EditText
+                android:id="@+id/reminder_et_description"
+                style="@style/InputsTaskEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/reminder_tv_label_description"
+                android:layout_toRightOf="@+id/reminder_tv_label_description"
+                android:background="@drawable/inputs_box"
+                android:hint="@string/fragment_reminder_et_hint_description"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/reminder_underline_height"
+                android:layout_below="@+id/reminder_et_description"
+                android:layout_marginTop="@dimen/reminder_underline_marginTop"
+                android:background="@color/dividerColor" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/remainder_layout_label_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/reminder_layout_items_marginTop">
+
+            <TextView
+                android:id="@+id/remainder_tv_label_date"
+                style="@style/LabelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fragment_reminder_tv_label_date" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/remainder_layout_values_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/reminder_layout_values_marginTop">
+
+            <TextView
+                style="@style/DatesValuesTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="@string/fragment_reminder_tv_label_set_date"
+                android:textColor="@color/datesColor" />
+
+            <TextView
+                android:id="@+id/remainder_tv_values_date"
+                style="@style/DatesValuesTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/reminder_underline_height"
+                android:layout_below="@+id/remainder_tv_values_date"
+                android:layout_marginTop="@dimen/reminder_underline_marginTop"
+                android:background="@color/dividerColor" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/reminder_layout_items_marginTop">
+
+            <TextView
+                style="@style/LabelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fragment_reminder_tv_label_time" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/remainder_layout_values_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/reminder_layout_values_marginTop">
+
+            <TextView
+                style="@style/DatesValuesTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="@string/fragment_reminder_tv_label_set_time" />
+
+            <TextView
+                android:id="@+id/remainder_tv_values_time"
+                style="@style/DatesValuesTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/reminder_underline_height"
+                android:layout_below="@+id/remainder_tv_values_time"
+                android:layout_marginTop="@dimen/reminder_underline_marginTop"
+                android:background="@color/dividerColor" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/reminder_layout_items_marginTop">
+
+            <TextView
+                style="@style/LabelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fragment_reminder_tv_label_repeat" />
+
+            <ImageView
+                android:id="@+id/remainder_iv_dropdown_repeat"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/reminder_dropdown_height"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="@dimen/reminder_negative_marginRight"
+                android:layout_marginRight="@dimen/reminder_negative_marginRight"
+                android:src="@mipmap/ic_dropdown_expand" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/remainder_layout_values_repeat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/reminder_layout_values_marginTop"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/DatesValuesTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="@string/fragment_reminder_tv_label_set_repeat" />
+
+            <Spinner
+                android:id="@+id/remainder_spinner_values_repeat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="@dimen/reminder_negative_marginRight"
+                android:layout_marginRight="@dimen/reminder_negative_marginRight"
+                android:entries="@array/spinner_task_reminder_repeat"
+                android:gravity="end"
+                tools:listitem="@layout/layout_spinner_repeat">
+
+            </Spinner>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/reminder_underline_height"
+                android:layout_below="@+id/remainder_spinner_values_repeat"
+                android:layout_marginTop="@dimen/reminder_underline_marginTop"
+                android:background="@color/dividerColor" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

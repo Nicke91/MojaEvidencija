@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="textSizeTitle">20sp</dimen>
+    <dimen name="textSizeSubTitle">18sp</dimen>
+    <dimen name="textSize">16sp</dimen>
+
+    <dimen name="checkList_item_iv_remove_size">32dp</dimen>
+
+    <dimen name="no_data_img_height">200dp</dimen>
+    <dimen name="no_data_img_width">200dp</dimen>
+    <dimen name="no_data_img_margin_top">93dp</dimen>
+    <dimen name="fab_corner_marginBottom">15dp</dimen>
+    <dimen name="fab_corner_marginRight">15dp</dimen>
+    <dimen name="fab_no_data_marginTop">20dp</dimen>
+
+    <dimen name="categoryItemPadding">5dp</dimen>
+    <dimen name="categoryItem_tv_marginLeft">5dp</dimen>
+    <dimen name="categoryItem_iv_icon_size">48dp</dimen>
+
+    <dimen name="taskPadding">20dp</dimen>
+    <dimen name="task_layout_labels_marginRight">40dp</dimen>
+    <dimen name="task_label_marginTop">20dp</dimen>
+    <dimen name="task_underline_marginTop">15dp</dimen>
+    <dimen name="task_content_marginTop">20dp</dimen>
+    <dimen name="task_underline_height">0.5dp</dimen>
+
+    <dimen name="task_sp_type_textSize">16sp</dimen>
+    <dimen name="task_sp_type_paddingTopAndBottom">5dp</dimen>
+    <dimen name="task_sp_type_paddingLeft">15dp</dimen>
+    <dimen name="task_sp_type_paddingRight">10dp</dimen>
+
+    <dimen name="task_input_marginTop">20dp</dimen>
+    <dimen name="task_input_paddingTopAndBottom">5dp</dimen>
+    <dimen name="task_input_paddingLeft">15dp</dimen>
+    <dimen name="task_input_paddingRight">10dp</dimen>
+    <dimen name="task_input_textSize">14dp</dimen>
+
+    <dimen name="fragments_marginTop">20dp</dimen>
+
+    <dimen name="note_paddingTopBottom">5dp</dimen>
+    <dimen name="note_paddingLeft">15dp</dimen>
+    <dimen name="note_paddingRight">10dp</dimen>
+
+    <item name="note_lines" type="dimen" format="integer">4</item>
+
+    <dimen name="checkList_marginTop">5dp</dimen>
+    <dimen name="checkList_underline_height">1dp</dimen>
+    <dimen name="checkList_underline_marginBottom">5dp</dimen>
+    <dimen name="checkList_ib_add_size">32dp</dimen>
+
+    <dimen name="checkList_item_et_marginLeft">15dp</dimen>
+    <dimen name="checkList_item_tv_marginLeft">15dp</dimen>
+    <dimen name="checkList_item_tv_textSize">18sp</dimen>
+    <dimen name="checkList_checkbox_size">1</dimen>
+
+    <dimen name="reminder_layout_content_marginTop">20dp</dimen>
+    <dimen name="reminder_layout_items_marginTop">15dp</dimen>
+    <dimen name="reminder_label_description_marginRight">60dp</dimen>
+    <dimen name="reminder_underline_height" >0.5dp</dimen>
+    <dimen name="reminder_underline_marginTop">10dp</dimen>
+    <dimen name="reminder_layout_values_marginTop">5dp</dimen>
+    <dimen name="reminder_values_textSize">16sp</dimen>
+    <dimen name="reminder_dropdown_height">30sp</dimen>
+    <dimen name="reminder_negative_marginRight">-16dp</dimen>
+
+    <dimen name="shoppingList_tv_total_marginTop">26dp</dimen>
+    <dimen name="shoppingList_tv_total_textSize">20sp</dimen>
+    <dimen name="shoppingList_ib_add_size">32dp</dimen>
+
+    <dimen name="shoppingList_et_name_weight">1.5</dimen>
+    <dimen name="shoppingList_et_price_weight">1</dimen>
+    <dimen name="shoppingList_item_et_price_marginTop">3dp</dimen>
+    <dimen name="shoppingList_item_textSize">18sp</dimen>
+
+    <dimen name="cardElevation">3dp</dimen>
+    <dimen name="cardMargin">3dp</dimen>
+    <dimen name="cardCornerRadius">5dp</dimen>
+    <dimen name="cardTask_tv_title_paddingLeft">10dp</dimen>
+    <dimen name="cardTask_tv_title_paddingTop">10dp</dimen>
+    <dimen name="cardTask_tv_title_textSize">17sp</dimen>
+    <dimen name="cardTask_tv_date_marginRight">3dp</dimen>
+    <dimen name="cardTask_tv_date_textSize">14sp</dimen>
+    <dimen name="cardTask_tv_time_paddingBottom">5dp</dimen>
+    <dimen name="cardTask_tv_total_marginRight">10dp</dimen>
+    <dimen name="cardTask_iv_icon">48dp</dimen>
+
+</resources>

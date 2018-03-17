@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">@color/colorMainBckg</color>
+    <color name="colorAccentCopy">#FF4081</color>
+    <color name="colorMainBckg">#0D3C55</color>
+    <color name="textColor">#b6b6b6</color>
+    <color name="textColorValue">@color/colorMainBckg</color>
+    <color name="borderColor">@color/colorBlack</color>
+    <color name="colorBlack">#000000</color>
+    <color name="datesColor">#262626</color>
+    <color name="dividerColor">#313131</color>
+    <color name="colorCardValue">#d1b149</color>
+    <color name="colorShoppingList">#FFFF87</color>
+</resources>

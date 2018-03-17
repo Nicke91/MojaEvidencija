@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/layout_task_notes"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/fragments_marginTop">
+
+    <EditText
+        android:id="@+id/et_task_note"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lines="@dimen/note_lines"
+        android:background="@drawable/notes_box"
+        android:hint="@string/hint_notes"
+        android:gravity="top"
+        android:paddingTop="@dimen/note_paddingTopBottom"
+        android:paddingBottom="@dimen/note_paddingTopBottom"
+        android:paddingStart="@dimen/note_paddingLeft"
+        android:paddingLeft="@dimen/note_paddingLeft"
+        android:paddingEnd="@dimen/note_paddingRight"
+        android:paddingRight="@dimen/note_paddingRight"/>
+
+</RelativeLayout>

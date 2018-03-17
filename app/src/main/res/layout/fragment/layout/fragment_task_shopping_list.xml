@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/fragments_marginTop"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TableLayout
+            android:id="@+id/layout_table_shopping_list_holder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:id="@+id/layout_task_list_labels"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/LabelTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/fragment_task_shopping_label_quantity" />
+
+                <TextView
+                    style="@style/LabelTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:text="@string/fragment_task_shopping_name_label" />
+
+                <TextView
+                    style="@style/LabelTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/fragment_task_shopping_label_price" />
+
+                <TextView
+                    style="@style/LabelTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/fragment_task_shopping_label_row_total" />
+
+            </TableRow>
+
+        </TableLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/ib_shopping_list_add"
+                android:layout_width="@dimen/shoppingList_ib_add_size"
+                android:layout_height="@dimen/shoppingList_ib_add_size"
+                android:layout_marginTop="20dp"
+                android:background="@mipmap/ic_category_add" />
+
+            <TextView
+                android:id="@+id/tv_shopping_list_total"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/shoppingList_tv_total_marginTop"
+                android:gravity="end"
+                android:text="@string/fragment_task_shopping_default_value"
+                android:textColor="@color/colorMainBckg"
+                android:textSize="@dimen/shoppingList_tv_total_textSize"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

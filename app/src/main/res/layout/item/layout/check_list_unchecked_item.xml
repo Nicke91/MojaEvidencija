@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/fragments_marginTop">
+
+    <EditText
+        android:id="@+id/checkList_et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/checkList_item_et_marginLeft"
+        android:layout_marginLeft="@dimen/checkList_item_et_marginLeft"
+        android:layout_toRightOf="@+id/checkList_remove"
+        android:layout_toEndOf="@+id/checkList_remove"
+        android:layout_toLeftOf="@id/checkList_checkBox"
+        android:layout_toStartOf="@id/checkList_checkBox"
+        android:layout_alignBaseline="@+id/checkList_checkBox"
+        android:inputType="textMultiLine"
+        android:imeOptions="actionDone"
+        android:fontFamily="sans-serif"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/textSize"/>
+
+    <CheckBox
+        android:id="@+id/checkList_checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleY="@dimen/checkList_checkbox_size"
+        android:scaleX="@dimen/checkList_checkbox_size"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:id="@+id/checkList_remove"
+        android:layout_width="@dimen/checkList_item_iv_remove_size"
+        android:layout_height="@dimen/checkList_item_iv_remove_size"
+        android:src="@android:drawable/ic_delete" />
+
+</RelativeLayout>

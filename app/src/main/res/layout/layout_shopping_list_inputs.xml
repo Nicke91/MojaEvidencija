@@ -1,0 +1,71 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Spinner
+            android:id="@+id/spinner_shopping_list_quantity_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/spinner_task_list_quantity" />
+
+        <EditText
+            android:id="@+id/et_shopping_list_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="@dimen/shoppingList_et_name_weight"
+            android:textSize="@dimen/shoppingList_item_textSize"/>
+
+        <EditText
+            android:id="@+id/et_shopping_list_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/shoppingList_item_et_price_marginTop"
+            android:layout_weight="1"
+            android:maxLength="7"
+            android:background="@drawable/inputs_box"
+            android:gravity="center"
+            android:inputType="number"
+            android:textSize="@dimen/shoppingList_item_textSize"/>
+
+        <TextView
+            android:id="@+id/tv_shopping_list_row_total"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/shoppingList_item_et_price_marginTop"
+            android:layout_weight="1"
+            android:gravity="top|center"
+            android:text="0"
+            android:textColor="@color/textColorValue"
+            android:textSize="@dimen/shoppingList_item_textSize" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end">
+
+        <ImageView
+            android:id="@+id/iv_shopping_list_delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_delete" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/task_underline_height"
+            android:layout_weight="1"
+            android:background="#000000" />
+
+    </TableRow>
+
+</TableLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TextView android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textSize="@dimen/task_sp_type_textSize"
+    android:paddingTop="@dimen/task_sp_type_paddingTopAndBottom"
+    android:paddingBottom="@dimen/task_sp_type_paddingTopAndBottom"
+    android:paddingStart="@dimen/task_sp_type_paddingLeft"
+    android:paddingLeft="@dimen/task_sp_type_paddingLeft"
+    android:paddingEnd="@dimen/task_sp_type_paddingRight"
+    android:paddingRight="@dimen/task_sp_type_paddingRight"/>

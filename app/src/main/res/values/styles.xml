@@ -1,0 +1,42 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorMainBckg</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <style name="LabelTextView" >
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">@dimen/textSizeSubTitle</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+    
+    <style name="DatesValuesTextView">
+        <item name="android:textColor">@color/datesColor</item>
+        <item name="android:textSize">@dimen/reminder_values_textSize</item>
+    </style>
+
+    <style name="InputsTaskEditText">
+        <item name="android:paddingTop">@dimen/task_input_paddingTopAndBottom</item>
+        <item name="android:paddingBottom">@dimen/task_input_paddingTopAndBottom</item>
+        <item name="android:paddingLeft">@dimen/task_input_paddingLeft</item>
+        <item name="android:paddingRight">@dimen/task_input_paddingRight</item>
+        <item name="android:inputType">textCapSentences</item>
+        <item name="android:textSize">@dimen/task_input_textSize</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+</resources>

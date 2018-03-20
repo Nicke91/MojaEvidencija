@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <dimen name="no_data_img_marginTop">300dp</dimen>
-    <dimen name="textSizeTitle">40dp</dimen>
-    <dimen name="no_data_img_height">300dp</dimen>
-    <dimen name="no_data_img_width">300dp</dimen>
-    <dimen name="categoryItemPadding">15dp</dimen>
-</resources>

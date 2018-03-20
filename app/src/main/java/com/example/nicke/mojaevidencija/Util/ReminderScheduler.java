@@ -79,39 +79,49 @@ public class ReminderScheduler {
 
             Calendar calendarToSet = Calendar.getInstance();
             calendarToSet.setTime(Utill.getFormattedDate(date, time));
+
+            //KOMENTAR BR. 1
+            //showInfo == true; provera da li da se poruka ispise za koliko ce alarm zvoniti (notifikacija), ukoliko je alarm podesen tog trenutka
+            //Vidi komentar br 2
+            //showInfo == false; sistem je rebutovan pa se ponovo postavlja alarm, ne pokazuj poruku
+            // isto ako je telefon ugasen i vreme za alarm je isteklo dok je telefon bio ugasen, i alarm nema ponavljanja (svaki dan, na 5 minuta) onda pusti odmah notifikaciju
             switch (repeat) {
                 case NO_REPEAT:
-                    if (calendarToSet.before(calendarCurrent)) {
-                        calendarToSet = CalendarHelper.getAdvancedDate(calendarToSet ,ADD_DAY);
+                    if (!showInfo) {
+                        while (calendarToSet.before(calendarCurrent)) {
+                            calendarToSet = CalendarHelper.getAdvancedDate(calendarToSet, ADD_DAY);
+                        }
+                        setAlarm(alarmManager, calendarToSet, REMINDER_NO_REPEAT, alarmIntent);
+                    } else {
+                        setAlarm(alarmManager, calendarCurrent, REMINDER_NO_REPEAT, alarmIntent);
                     }
-                    setAlarm(alarmManager, calendarToSet, REMINDER_NO_REPEAT, alarmIntent);
                     break;
                 case REPEAT_EVERY_DAY:
-                    if (calendarToSet.before(calendarCurrent)) {
+                    while (calendarToSet.before(calendarCurrent)) {
                         calendarToSet = CalendarHelper.getAdvancedDate(calendarToSet, ADD_DAY);
                     }
                     setAlarm(alarmManager, calendarToSet, REMINDER_REPEAT_DAILY, alarmIntent);
                     break;
                 case REPEAT_MINUTES_FIVE:
-                    if (calendarToSet.before(calendarCurrent)) {
+                    while (calendarToSet.before(calendarCurrent)) {
                         calendarToSet = CalendarHelper.getAdvancedTime(calendarToSet, ADD_MINUTES_FIVE);
                     }
                     setAlarm(alarmManager, calendarToSet, REMINDER_MINUTES_FIVE, alarmIntent);
                     break;
                 case REPEAT_MINUTES_FIFTEEN:
-                    if (calendarToSet.before(calendarCurrent)) {
+                    while (calendarToSet.before(calendarCurrent)) {
                         calendarToSet = CalendarHelper.getAdvancedTime(calendarToSet, ADD_MINUTES_FIFTEEN);
                     }
                     setAlarm(alarmManager, calendarToSet, REMINDER_MINUTES_FIFTEEN, alarmIntent);
                     break;
                 case REPEAT_HALF_HOUR:
-                    if (calendarToSet.before(calendarCurrent)) {
+                    while (calendarToSet.before(calendarCurrent)) {
                         calendarToSet = CalendarHelper.getAdvancedTime(calendarToSet, ADD_HALF_HOUR);
                     }
                     setAlarm(alarmManager,calendarToSet, REMINDER_HALF_HOUR, alarmIntent);
                     break;
                 case REPEAT_HOUR:
-                    if (calendarToSet.before(calendarCurrent)) {
+                    while (calendarToSet.before(calendarCurrent)) {
                         calendarToSet = CalendarHelper.getAdvancedTime(calendarToSet, ADD_HOUR);
                     }
                     setAlarm(alarmManager,calendarToSet, REMINDER_REPEAT_HOUR, alarmIntent);
@@ -119,6 +129,8 @@ public class ReminderScheduler {
             }
 
             Date dateSet = calendarToSet.getTime();
+            //KOMENTAR BR. 2
+            // ovde se vrsi provera da li treba poruka ili ne, pomenuta u komentaru br. 1
             if (showInfo) {
                 Utill.displayRemainingTime(CalendarHelper.getRemainingTime(dateSet, calendarCurrent.getTime()), context);
             }
@@ -133,9 +145,16 @@ public class ReminderScheduler {
     }
 
     private static void setAlarm(AlarmManager alarmManager, Calendar c, long interval, PendingIntent alarmIntent) {
-        if (interval == REMINDER_NO_REPEAT) {
-            alarmManager.set(AlarmManager.RTC_WAKEUP, c.getTimeInMillis(), alarmIntent);
-            return;
+        if (Build.VERSION.SDK_INT < 19) {
+            if (interval == REMINDER_NO_REPEAT) {
+                alarmManager.set(AlarmManager.RTC_WAKEUP, c.getTimeInMillis(), alarmIntent);
+                return;
+            }
+        } else {
+            if (interval == REMINDER_NO_REPEAT) {
+                alarmManager.setExact(AlarmManager.RTC_WAKEUP, c.getTimeInMillis(), alarmIntent);
+                return;
+            }
         }
         alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, c.getTimeInMillis(), interval, alarmIntent);
     }

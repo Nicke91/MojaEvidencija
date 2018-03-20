@@ -1,9 +1,12 @@
 package com.example.nicke.mojaevidencija.Util;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.support.v7.app.AlertDialog;
 import android.text.InputType;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Toast;
@@ -13,7 +16,6 @@ import com.example.nicke.mojaevidencija.MainActivity;
 import com.example.nicke.mojaevidencija.Model.Category;
 import com.example.nicke.mojaevidencija.R;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -29,7 +31,7 @@ public class AlertDialogHelper {
 
         AlertDialog.Builder dialog = new AlertDialog.Builder((MainActivity) activity);
         dialog.setTitle(String.format(AppConfig.getSystemString((MainActivity)(activity),R.string.dialog_title_category_delete), category.getName()));
-        dialog.setMessage(String.format(AppConfig.getSystemString((MainActivity) (activity),R.string.dialog_message_are_you_sure), category.getName()));
+        dialog.setMessage(String.format(AppConfig.getSystemString((MainActivity) (activity),R.string.dialog_message_category_are_you_sure), category.getName()));
         dialog.setPositiveButton(((MainActivity)activity).getResources().getString(R.string.dialog_button_delete), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
@@ -45,6 +47,63 @@ public class AlertDialogHelper {
 
         final AlertDialog alert = dialog.create();
         alert.show();
+    }
+
+    public static Dialog editCategoryTitle(View view, final ActionBarListener actionBarListener) {
+        final Category category = PrefManager.getCategory(view.getContext());
+        final EditText editText = view.findViewById(R.id.dialog_category_editText);
+        editText.setHint("");
+        editText.setText(category.getName());
+
+        final AlertDialog alertDialog = new AlertDialog.Builder(view.getContext())
+                .setView(view)
+                .setTitle(AppConfig.getSystemString(view.getContext(), R.string.dialog_title_category_change_title))
+                .setMessage(AppConfig.getSystemString(view.getContext(), R.string.dialog_message_category_change_title))
+                .setPositiveButton(AppConfig.getSystemString(view.getContext(), R.string.ok), null)
+                .create();
+
+        alertDialog.setOnShowListener(new DialogInterface.OnShowListener() {
+            @Override
+            public void onShow(DialogInterface dialogInterface) {
+                Button okBtn = alertDialog.getButton(AlertDialog.BUTTON_POSITIVE);
+                okBtn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        String input = editText.getText().toString().trim();
+
+                        if (input.equals("")) {
+                            editText.setError(AppConfig.getSystemString(view.getContext(), R.string.error_empty_name));
+                            return;
+                        }
+                        List<Category> categories = Category.find(Category.class, AppConfig.SUGAR_WHERE_NAME, input);
+
+                        if (categories != null && categories.size() > 0) {
+                            for (Category category : categories) {
+                                if (category.getName().equals(input)) {
+                                    editText.setError(AppConfig.getSystemString(view.getContext(), R.string.error_category_exists));
+                                    return;
+                                }
+                            }
+                        }
+                        Category currentCategory = Category.findById(Category.class, category.getId());
+
+                        if (currentCategory != null) {
+
+                            currentCategory.setName(input);
+                            if (category.getDate() != null) {
+                                currentCategory.setDate(category.getDate());
+                            }
+                            currentCategory.save();
+                            PrefManager.setCategory(currentCategory, view.getContext());
+                            actionBarListener.onEditCategoryFinished();
+
+                        }
+                        alertDialog.dismiss();
+                    }
+                });
+            }
+        });
+        return alertDialog;
     }
 
     public static void editCategoryName(final Context context, final ActionBarListener actionBarListener) {
@@ -107,7 +166,8 @@ public class AlertDialogHelper {
     public static void areYouSureDialog(Context context, final AlarmDeleteListener alarmDeleteListener) {
 
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
-        builder.setTitle(AppConfig.getSystemString(context, R.string.dialog_message_are_you_sure))
+        builder.setTitle(AppConfig.getSystemString(context, R.string.dialog_title_delete))
+                .setMessage(AppConfig.getSystemString(context, R.string.dialog_message_are_you_sure))
                 .setPositiveButton(AppConfig.getSystemString(context, R.string.dialog_button_delete), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {

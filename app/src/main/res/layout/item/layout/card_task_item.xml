@@ -11,7 +11,8 @@
         android:layout_gravity="center"
         android:layout_margin="@dimen/cardMargin"
         android:elevation="@dimen/cardElevation"
-        card_view:cardCornerRadius="@dimen/cardCornerRadius">
+        card_view:cardCornerRadius="@dimen/cardCornerRadius"
+        card_view:cardPreventCornerOverlap="false">
 
     <RelativeLayout
         android:layout_width="match_parent"

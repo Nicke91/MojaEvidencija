@@ -15,6 +15,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.nicke.mojaevidencija.Adapter.TaskAdapter;
+import com.example.nicke.mojaevidencija.Fragment.CategoryEditTitleFragmentDialog;
 import com.example.nicke.mojaevidencija.Model.Category;
 import com.example.nicke.mojaevidencija.Model.Task;
 import com.example.nicke.mojaevidencija.Util.AlertDialogHelper;
@@ -124,7 +125,9 @@ public class CategoryDetailsActivity extends AppCompatActivity implements TaskAd
     }
 
     private void changeCategoryName() {
-        AlertDialogHelper.editCategoryName(CategoryDetailsActivity.this, this);
+        CategoryEditTitleFragmentDialog categoryEditTitleFragmentDialog = new CategoryEditTitleFragmentDialog();
+        categoryEditTitleFragmentDialog.setActionBarListener(this);
+        categoryEditTitleFragmentDialog.show(getSupportFragmentManager(), "CategoryDetailsActivity.CategoryEditDialog");
     }
 
     @Override

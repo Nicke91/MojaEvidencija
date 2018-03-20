@@ -1,76 +1,74 @@
 <resources>
-    <string name="app_name">MojaEvidencija</string>
+    <string name="app_name">Moja Evidencija</string>
 
     <string name="isTablet">false</string>
     <string name="ok">OK</string>
 
-    <string name="dialog_title_new_category">Nova tema</string>
-    <string name="dialog_message_enter_category_title">Unesite naziv teme</string>
-    <string name="hint_theme_title">Naziv</string>
+    <string name="dialog_title_new_category">New topic</string>
+    <string name="dialog_hint_new_category">Enter topic title</string>
 
-    <string name="dialog_title_category_delete">Izbriši %s</string>
-    <string name="dialog_message_are_you_sure">Da li ste sigurni da želite da izbrišete %s?</string>
-    <string name="dialog_title_are_you_sure">Da li ste sigurni?</string>
-    <string name="dialog_button_delete">Izbriši</string>
-    <string name="dialog_button_cancel">Odustani</string>
+    <string name="dialog_title_category_delete">Delete %s</string>
+    <string name="dialog_message_category_are_you_sure">Are you sure you want to delete %s?</string>
+    <string name="dialog_title_delete">Delete</string>
+    <string name="dialog_message_are_you_sure">Are you sure?</string>
+    <string name="dialog_button_delete">OK</string>
+    <string name="dialog_button_cancel">@android:string/cancel</string>
 
-    <string name="dialog_title_category_change_title">Promena imena</string>
-    <string name="dialog_message_category_change_title">Promenite ime teme</string>
-    <string name="button_add">DODAJ</string>
+    <string name="dialog_title_category_change_title">Rename title</string>
+    <string name="dialog_message_category_change_title">Enter topic title</string>
+    <string name="button_add">ADD</string>
 
-    <string name="main_create_theme">KREIRAJ TEMU</string>
+    <string name="main_create_theme">CREATE TOPIC</string>
 
-    <string name="label_task_type">Tip:</string>
-    <string name="label_task_title">Naslov:</string>
-    <string name="hint_task_add_title">Unesite naslov</string>
+    <string name="label_task_type">Type:</string>
+    <string name="label_task_title">Title:</string>
+    <string name="hint_task_add_title">Enter title</string>
 
-    <string name="hint_notes">Moja beleška..</string>
+    <string name="hint_notes">My note..</string>
 
-    <string name="fragment_task_shopping_label_quantity">Količina</string>
-    <string name="fragment_task_shopping_name_label">Naziv</string>
-    <string name="fragment_task_shopping_label_price">Cena</string>
-    <string name="fragment_task_shopping_label_row_total">Ukupno</string>
+    <string name="fragment_task_shopping_label_quantity">Amount</string>
+    <string name="fragment_task_shopping_name_label">Name</string>
+    <string name="fragment_task_shopping_label_price">Price</string>
+    <string name="fragment_task_shopping_label_row_total">Total</string>
 
-    <string name="fragment_task_remainder_switch_label">Podsetnik</string>
-    <string name="fragment_reminder_tv_label_date">Datum:</string>
-    <string name="fragment_reminder_tv_label_set_date">Podesi datum:</string>
-    <string name="fragment_reminder_tv_label_time">Vreme:</string>
-    <string name="fragment_reminder_tv_label_set_time">Podesi vreme:</string>
-    <string name="fragment_reminder_tv_label_repeat">Ponavljanje:</string>
-    <string name="fragment_reminder_tv_label_set_repeat">Ponavljaj:</string>
-    <string name="fragment_reminder_tv_label_description">Opis:</string>
-    <string name="fragment_reminder_et_hint_description">Želim da..</string>
+    <string name="fragment_task_remainder_switch_label">Reminder</string>
+    <string name="fragment_reminder_tv_label_date">Date:</string>
+    <string name="fragment_reminder_tv_label_set_date">Set date:</string>
+    <string name="fragment_reminder_tv_label_time">Time:</string>
+    <string name="fragment_reminder_tv_label_set_time">Set time:</string>
+    <string name="fragment_reminder_tv_label_repeat">Repeating:</string>
+    <string name="fragment_reminder_tv_label_set_repeat">Repeat:</string>
+    <string name="fragment_reminder_tv_label_description">Description:</string>
+    <string name="fragment_reminder_et_hint_description">I want to..</string>
 
-    <string name="error_category_exists">Tema već postoji</string>
-    <string name="error_empty_name">Naziv ne sme da bude prazan</string>
-    <string name="error_empty_title">Naslov ne sme da bude prazan</string>
-    <string name="error_no_empty_field">Prazno polje</string>
-    <string name="error_title_exists">Naslov već postoji u ovoj oblasti</string>
+    <string name="error_category_exists">Topic already exists</string>
+    <string name="error_empty_name">Input title</string>
+    <string name="error_empty_title">Input title</string>
+    <string name="error_no_empty_field">Field is empty</string>
+    <string name="error_title_exists">Title already exists in this topic</string>
 
     <string name="menu_edit">Edit</string>
     <string name="fragment_task_shopping_default_value">0</string>
-    <string name="category_task_no_data">Nema aktivnosti</string>
+    <string name="category_task_no_data">No data</string>
 
-    <string name="toast_time_desc_day_one">%s dan</string>
-    <string name="toast_time_desc_day_multiple">%s dan(a)</string>
-    <string name="toast_time_desc_hour_one">%s sat</string>
-    <string name="toast_time_desc_hour_multiple">%s sat(i)</string>
-    <string name="toast_time_desc_minute_one">%s minut</string>
-    <string name="toast_time_desc_minute_multiple">%s minuta</string>
+    <string name="toast_time_desc_day_one">%s day from now</string>
+    <string name="toast_time_desc_day_multiple">%s days from</string>
+    <string name="toast_time_desc_hour_one">%s hour from now</string>
+    <string name="toast_time_desc_hour_multiple">%s hours from now</string>
+    <string name="toast_time_desc_minute_one">%s minut from now</string>
+    <string name="toast_time_desc_minute_multiple">%s minutes from now</string>
 
-    <string name="toast_time_alarm_set_for">Alarm će se uključiti za</string>
-    <string name="toast_time_alarm_less_then_minute">Alarm će se uključiti za manje od 1 minuta</string>
-    <string name="fragment_check_list_done">Završeno</string>
-    <string name="fragment_check_list_btn_delete_all">Izbriši sve</string>
-    <string name="fragment_check_list_not_done">Uraditi</string>
-
-
+    <string name="toast_time_alarm_set_for">Alarm will be set</string>
+    <string name="toast_time_alarm_less_then_minute">Alarm will be set 1 minut from now</string>
+    <string name="fragment_check_list_done">Finished</string>
+    <string name="fragment_check_list_btn_delete_all">Clear all</string>
+    <string name="fragment_check_list_not_done">TO DO</string>
 
     <string-array name="spinner_task_types">
-        <item>Beleška</item>
-        <item>To - do lista</item>
-        <item>Evidencija troškova</item>
-        <item>Podsetnik</item>
+        <item>Note</item>
+        <item>To - do list</item>
+        <item>Record of expenses</item>
+        <item>Reminder</item>
     </string-array>
 
     <string-array name="spinner_task_list_quantity">
@@ -82,10 +80,11 @@
     </string-array>
 
     <string-array name="spinner_task_reminder_repeat">
-        <item>Svaki dan</item>
-        <item>Na 5 minuta</item>
-        <item>Na 15 minuta</item>
-        <item>Na 30 minuta</item>
-        <item>Na svakih sat vremena</item>
+        <item>Every day</item>
+        <item>Every 5 minutes</item>
+        <item>Every 15 minutes</item>
+        <item>Every 30 minutes</item>
+        <item>Every hour</item>
     </string-array>
+    <string name="dialog_hint_new_cateogry">Enter topic title</string>
 </resources>

@@ -13,7 +13,7 @@ import android.widget.EditText;
 
 import com.example.nicke.mojaevidencija.Model.Category;
 import com.example.nicke.mojaevidencija.R;
-import com.example.nicke.mojaevidencija.SqlDatabase.SQLDatabaseManager;
+import com.example.nicke.mojaevidencija.Util.AppConfig;
 
 /**
  * Created on 2/7/2018.
@@ -32,11 +32,12 @@ public class CategoryFragmentDialog extends DialogFragment {
         View view = LayoutInflater.from(getActivity()).inflate(R.layout.dialog_category, null);
 
         editText = view.findViewById(R.id.dialog_category_editText);
+        editText.setHint(AppConfig.getSystemString(view.getContext(), R.string.dialog_hint_new_category));
+
 
         final AlertDialog alertDialog = new AlertDialog.Builder(getActivity())
                 .setView(view)
                 .setTitle(R.string.dialog_title_new_category)
-                .setMessage(R.string.dialog_message_enter_category_title)
                 .setPositiveButton(R.string.ok, null)
                 .create();
         alertDialog.setOnShowListener(new DialogInterface.OnShowListener() {

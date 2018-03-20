@@ -320,18 +320,15 @@ public class TaskDetailsActivity extends AppCompatActivity implements AlertDialo
                     checkItem.delete();
                 }
             }
-
             if (tempShoppingList != null && tempShoppingList.size() > 0) {
                 for (Shopping shopping : tempShoppingList) {
                     shopping.delete();
                 }
             }
-
             if (tempReminder != null) {
                 tempReminder.delete();
             }
             currentTask.delete();
-
         }
         finish();
     }

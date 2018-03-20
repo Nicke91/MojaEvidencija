@@ -10,6 +10,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Locale;
 
 /**
  * Created on 3/1/2018.
@@ -18,13 +19,13 @@ import java.util.Date;
 public class Utill {
 
     public static String getFormattedDate(Date date) {
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy", Locale.GERMANY);
         return sdf.format(date);
     }
 
     public static Date getFormattedDate(String dateString, String timeString) {
         Calendar calendar = Calendar.getInstance();
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm", Locale.GERMANY);
         try {
             Date date = sdf.parse(dateString + " " + timeString);
             calendar.setTime(date);
@@ -36,7 +37,7 @@ public class Utill {
     }
 
     public static String getFormattedCurrentTime() {
-        DateFormat sdf = new SimpleDateFormat("HH:mm");
+        DateFormat sdf = new SimpleDateFormat("HH:mm", Locale.GERMANY);
         Date date;
         try {
             date = sdf.parse(CalendarHelper.getCurrentTime());
@@ -53,7 +54,7 @@ public class Utill {
         calendar.set(Calendar.HOUR_OF_DAY, hour);
         calendar.set(Calendar.MINUTE, minute);
 
-        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
+        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm", Locale.GERMANY);
         Date time = calendar.getTime();
 
         return sdf.format(time);

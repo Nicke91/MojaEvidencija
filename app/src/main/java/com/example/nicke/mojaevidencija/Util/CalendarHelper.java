@@ -42,7 +42,7 @@ public class CalendarHelper {
         return calendar;
     }
 
-    public static Calendar getAdvancedTime(Calendar calendar,int minutes) {
+    public static Calendar getAdvancedTime(Calendar calendar, int minutes) {
         calendar.add(Calendar.MINUTE, minutes);
         return calendar;
     }

@@ -87,7 +87,7 @@ public class ReminderScheduler {
             // isto ako je telefon ugasen i vreme za alarm je isteklo dok je telefon bio ugasen, i alarm nema ponavljanja (svaki dan, na 5 minuta) onda pusti odmah notifikaciju
             switch (repeat) {
                 case NO_REPEAT:
-                    if (!showInfo) {
+                    if (showInfo) {
                         while (calendarToSet.before(calendarCurrent)) {
                             calendarToSet = CalendarHelper.getAdvancedDate(calendarToSet, ADD_DAY);
                         }

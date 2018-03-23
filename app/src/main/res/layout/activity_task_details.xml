@@ -36,7 +36,8 @@
         android:layout_height="wrap_content"
         android:layout_toEndOf="@+id/layout_task_labels"
         android:layout_toRightOf="@+id/layout_task_labels"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_alignBaseline="@+id/layout_task_labels">
 
         <Spinner
             android:id="@+id/spinner_type"

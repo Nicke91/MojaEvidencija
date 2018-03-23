@@ -89,7 +89,7 @@
                 android:singleLine="true"
                 android:ellipsize="marquee"
                 android:textColor="@color/colorCardValue"
-                android:textSize="14sp"/>
+                android:textSize="@dimen/cardTask_total_tv_textSize"/>
 
         </RelativeLayout>
 

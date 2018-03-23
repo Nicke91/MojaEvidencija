@@ -83,6 +83,7 @@
     <dimen name="cardTask_tv_date_textSize">14sp</dimen>
     <dimen name="cardTask_tv_time_paddingBottom">5dp</dimen>
     <dimen name="cardTask_tv_total_marginRight">10dp</dimen>
+    <dimen name="cardTask_total_tv_textSize">14sp</dimen>
     <dimen name="cardTask_iv_icon">48dp</dimen>
 
 </resources>

@@ -62,12 +62,8 @@ public class CategoryDetailsActivity extends AppCompatActivity implements TaskAd
         recyclerView = findViewById(R.id.cardTask_recyclerView);
 
         RecyclerView.LayoutManager layoutManager;
+        layoutManager = new GridLayoutManager(getApplicationContext(), 2);
 
-        if (AppConfig.getSystemString(this, R.string.isTablet).equals("true")) {
-            layoutManager = new GridLayoutManager(getApplicationContext(), 4);
-        } else {
-            layoutManager = new GridLayoutManager(getApplicationContext(), 2);
-        }
         recyclerView.setLayoutManager(layoutManager);
         taskAdapter = new TaskAdapter(taskList, this);
         recyclerView.setAdapter(taskAdapter);

@@ -2,8 +2,8 @@
 <resources>
     <dimen name="no_data_img_marginTop">300dp</dimen>
     <dimen name="textSizeTitle">40sp</dimen>
-    <dimen name="textSizeSubTitle">36sp</dimen>
-    <dimen name="textSize">28sp</dimen>
+    <dimen name="textSizeSubTitle">30sp</dimen>
+    <dimen name="textSize">26sp</dimen>
 
 
     <dimen name="no_data_img_height">300dp</dimen>
@@ -12,20 +12,22 @@
     <dimen name="categoryItemPadding">5dp</dimen>
     <dimen name="categoryItem_iv_icon_size">56dp</dimen>
 
+    <dimen name="task_layout_labels_marginRight">60dp</dimen>
+    <dimen name="task_label_marginTop">30dp</dimen>
     <dimen name="taskPadding">30dp</dimen>
-    <dimen name="task_input_paddingTopAndBottom">10dp</dimen>
+    <dimen name="task_input_paddingTopAndBottom">8dp</dimen>
     <dimen name="task_input_paddingLeft">30dp</dimen>
     <dimen name="task_input_paddingRight">20dp</dimen>
-    <dimen name="task_input_textSize">24dp</dimen>
+    <dimen name="task_input_textSize">24sp</dimen>
 
     <dimen name="task_sp_type_textSize">30sp</dimen>
-    <dimen name="task_sp_type_paddingTopAndBottom">10dp</dimen>
+    <dimen name="task_sp_type_paddingTopAndBottom">15dp</dimen>
     <dimen name="task_sp_type_paddingLeft">30dp</dimen>
     <dimen name="task_sp_type_paddingRight">20dp</dimen>
 
-    <item name="note_lines" type="dimen" format="integer">9</item>
+    <item name="note_lines" type="dimen" format="integer">5</item>
 
-    <dimen name="reminder_values_textSize">28sp</dimen>
+    <dimen name="reminder_values_textSize">26sp</dimen>
     <dimen name="reminder_dropdown_height">60sp</dimen>
 
     <dimen name="checkList_item_tv_textSize">32sp</dimen>
@@ -33,7 +35,9 @@
     <dimen name="checkList_item_iv_remove_size">48dp</dimen>
     <dimen name="checkList_ib_add_size">48dp</dimen>
 
-    <dimen name="shoppingList_et_name_weight">3</dimen>
+    <dimen name="shoppingList_tv_total_textSize">34sp</dimen>
+
+    <dimen name="shoppingList_et_name_weight">2</dimen>
     <dimen name="shoppingList_et_price_weight">1</dimen>
     <dimen name="shoppingList_item_et_price_marginTop">3dp</dimen>
     <dimen name="shoppingList_item_textSize">32sp</dimen>

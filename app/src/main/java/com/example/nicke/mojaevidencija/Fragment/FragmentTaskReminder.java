@@ -79,7 +79,7 @@ public class FragmentTaskReminder extends FragmentAdapter implements View.OnClic
             PrefManager.setRemainder(thisReminder, getContext());
         }
 
-        repeatAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        repeatAdapter.setDropDownViewResource(R.layout.layout_spinner_repeat);
         spRepeatValue = view.findViewById(R.id.remainder_spinner_values_repeat);
         spRepeatValue.setAdapter(repeatAdapter);
 

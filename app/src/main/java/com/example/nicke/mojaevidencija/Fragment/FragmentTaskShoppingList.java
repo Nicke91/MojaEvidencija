@@ -69,7 +69,8 @@ public class FragmentTaskShoppingList extends FragmentAdapter implements View.On
                 SP_QUANTITY_ITEM
         );
 
-        quantityAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        quantityAdapter.setDropDownViewResource(R.layout.layout_spinner_repeat);
+
 
         viewList = new ArrayList<>();
 
@@ -111,6 +112,7 @@ public class FragmentTaskShoppingList extends FragmentAdapter implements View.On
             if (viewList != null && viewList.size() > 0) {
                 for (int i = 0; i < viewList.size(); i++) {
                     quantitySpinner = viewList.get(i).findViewById(R.id.spinner_shopping_list_quantity_select);
+                    quantitySpinner.setAdapter(quantityAdapter);
                     titleET = viewList.get(i).findViewById(R.id.et_shopping_list_name);
                     priceET = viewList.get(i).findViewById(R.id.et_shopping_list_price);
                     rowTotalTV = viewList.get(i).findViewById(R.id.tv_shopping_list_row_total);
@@ -136,6 +138,7 @@ public class FragmentTaskShoppingList extends FragmentAdapter implements View.On
         shoppingListLayout.addView(rowView, shoppingListLayout.getChildCount());
 
         quantitySpinner = rowView.findViewById(R.id.spinner_shopping_list_quantity_select);
+        quantitySpinner.setAdapter(quantityAdapter);
         titleET = rowView.findViewById(R.id.et_shopping_list_name);
         priceET = rowView.findViewById(R.id.et_shopping_list_price);
         rowTotalTV = rowView.findViewById(R.id.tv_shopping_list_row_total);

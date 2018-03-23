@@ -6,54 +6,69 @@
     android:padding="@dimen/taskPadding">
 
     <LinearLayout
-        android:id="@+id/layout_task_labels"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/task_layout_labels_marginRight"
-        android:layout_marginRight="@dimen/task_layout_labels_marginRight"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/label_task_type"
-            style="@style/LabelTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/label_task_type" />
-
-        <TextView
-            android:id="@+id/label_task_title"
-            style="@style/LabelTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/task_label_marginTop"
-            android:text="@string/label_task_title" />
-
-    </LinearLayout>
-
-    <LinearLayout
         android:id="@+id/layout_task_inputs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_toEndOf="@+id/layout_task_labels"
-        android:layout_toRightOf="@+id/layout_task_labels"
-        android:orientation="vertical"
-        android:layout_alignBaseline="@+id/layout_task_labels">
+        android:orientation="vertical">
 
-        <Spinner
-            android:id="@+id/spinner_type"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:entries="@array/spinner_task_types"
-            tools:listitem="@layout/layout_spinner_type"/>
+            android:layout_marginBottom="@dimen/task_label_marginTop">
 
-        <EditText
-            android:id="@+id/et_task_title"
-            style="@style/InputsTaskEditText"
+            <TextView
+                android:id="@+id/label_task_type"
+                style="@style/LabelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_task_type"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true" />
+
+            <Spinner
+                android:id="@+id/spinner_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-5dp"
+                android:layout_marginLeft="@dimen/task_layout_labels_marginRight"
+                android:layout_marginStart="@dimen/task_layout_labels_marginRight"
+                android:layout_toEndOf="@+id/label_task_type"
+                android:layout_toRightOf="@+id/label_task_type"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:entries="@array/spinner_task_types"
+                tools:listitem="@layout/layout_spinner_type"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/task_input_marginTop"
-            android:background="@drawable/inputs_box"
-            android:hint="@string/hint_task_add_title" />
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/label_task_title"
+                style="@style/LabelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_task_title" />
+
+
+            <EditText
+                android:id="@+id/et_task_title"
+                style="@style/InputsTaskEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@+id/label_task_title"
+                android:layout_toEndOf="@+id/label_task_title"
+                android:layout_marginLeft="@dimen/task_layout_labels_marginRight"
+                android:layout_marginStart="@dimen/task_layout_labels_marginRight"
+                android:background="@drawable/inputs_box"
+                android:hint="@string/hint_task_add_title"
+                android:textSize="@dimen/textSize"/>
+        </RelativeLayout>
 
     </LinearLayout>
 

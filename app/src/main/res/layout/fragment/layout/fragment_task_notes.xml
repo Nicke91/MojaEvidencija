@@ -19,6 +19,6 @@
         android:paddingLeft="@dimen/note_paddingLeft"
         android:paddingEnd="@dimen/note_paddingRight"
         android:paddingRight="@dimen/note_paddingRight"
-        android:textSize="@dimen/textSizeSubTitle"/>
+        android:textSize="@dimen/textSize"/>
 
 </RelativeLayout>

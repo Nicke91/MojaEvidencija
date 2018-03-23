@@ -66,11 +66,11 @@ public class TaskDetailsActivity extends AppCompatActivity implements AlertDialo
 
         ArrayAdapter<String> typeAdapter = new ArrayAdapter<>(
                 this,
-                R.layout.layout_spinner_repeat,
+                R.layout.layout_spinner_type,
                 SP_TYPE
         );
 
-        typeAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        typeAdapter.setDropDownViewResource(R.layout.layout_spinner_type);
         typeSpinner.setAdapter(typeAdapter);
 
         onNewIntent(getIntent());

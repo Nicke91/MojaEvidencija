@@ -9,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.LinearLayout;
 
+import com.crashlytics.android.Crashlytics;
 import com.example.nicke.mojaevidencija.Adapter.CategoryAdapter;
 import com.example.nicke.mojaevidencija.AppHelpers.DateFormatter;
 import com.example.nicke.mojaevidencija.Fragment.CategoryFragmentDialog;
@@ -16,6 +17,7 @@ import com.example.nicke.mojaevidencija.Model.Category;
 import com.example.nicke.mojaevidencija.Model.Task;
 import com.example.nicke.mojaevidencija.Util.PrefManager;
 
+import io.fabric.sdk.android.Fabric;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,6 +35,7 @@ public class MainActivity extends AppCompatActivity implements CategoryFragmentD
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Fabric.with(this, new Crashlytics());
         setContentView(R.layout.activity_main);
 
         init();

@@ -185,12 +185,36 @@ public class AlertDialogHelper {
         dialog.show();
     }
 
+    public static void goBackDialog(Context context, final BackListener backListener) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        builder.setTitle(AppConfig.getSystemString(context, R.string.dialog_title_button_back))
+                .setMessage(AppConfig.getSystemString(context, R.string.dialog_message_button_back_save))
+                .setPositiveButton(AppConfig.getSystemString(context, R.string.ok), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        backListener.onSaveConfirmed(true);
+                    }
+                })
+                .setNegativeButton(AppConfig.getSystemString(context, R.string.dialog_no_thanks), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        backListener.onSaveConfirmed(false);
+                    }
+                });
+        final AlertDialog dialog = builder.create();
+        dialog.show();
+    }
+
     public interface ActionBarListener {
         void onEditCategoryFinished();
     }
 
     public interface AlarmDeleteListener {
         void onDeleteConfirmed(boolean canDelete);
+    }
+
+    public interface BackListener {
+        void onSaveConfirmed(boolean canSave);
     }
 
 }

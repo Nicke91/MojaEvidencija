@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -37,7 +38,7 @@ import java.util.List;
  * Created on 2/15/2018.
  */
 
-public class TaskDetailsActivity extends AppCompatActivity implements AlertDialogHelper.AlarmDeleteListener {
+public class TaskDetailsActivity extends AppCompatActivity implements AlertDialogHelper.AlarmDeleteListener, AlertDialogHelper.BackListener {
 
     public static final int NOTES = 0;
     public static final int TO_DO_LIST = 1;
@@ -337,16 +338,29 @@ public class TaskDetailsActivity extends AppCompatActivity implements AlertDialo
         getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout_content_holder, fragment).commitAllowingStateLoss();
     }
 
+
     @Override
-    public void onBackPressed() {
-        finish();
-        super.onBackPressed();
+    public boolean onKeyUp(int keyCode, KeyEvent event) {
+
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            AlertDialogHelper.goBackDialog(this,  this);
+        }
+        return true;
     }
 
     @Override
     public void onDeleteConfirmed(boolean canDelete) {
         if (canDelete) {
            deleteTask();
+        }
+    }
+
+    @Override
+    public void onSaveConfirmed(boolean canSave) {
+        if (canSave) {
+            saveTask();
+        } else {
+            finish();
         }
     }
 }

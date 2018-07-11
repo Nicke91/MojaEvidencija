@@ -3,12 +3,15 @@
 
     <string name="isTablet">false</string>
     <string name="ok">OK</string>
+    <string name="dialog_no_thanks">NE, HVALA!</string>
 
     <string name="dialog_title_new_category">Nova tema</string>
     <string name="dialog_hint_new_cateogry">Unesite naziv teme</string>
 
     <string name="dialog_title_category_delete">Izbriši %s</string>
     <string name="dialog_message_category_are_you_sure">Da li ste sigurni da želite da izbrišete %s?</string>
+    <string name="dialog_title_button_back">Promene nisu sačuvane!</string>
+    <string name="dialog_message_button_back_save">Da li želite da sačuvate promene?</string>
     <string name="dialog_title_delete">Brisanje</string>
     <string name="dialog_message_are_you_sure">Da li ste sigurni?</string>
     <string name="dialog_button_delete">Izbriši</string>
@@ -86,5 +89,4 @@
         <item>Na 30 minuta</item>
         <item>Na svakih sat vremena</item>
     </string-array>
-    <string name="dialog_hint_new_category">Unesite naziv teme</string>
 </resources>

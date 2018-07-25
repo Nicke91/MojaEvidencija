@@ -3,7 +3,7 @@
 
     <string name="isTablet">false</string>
     <string name="ok">OK</string>
-    <string name="dialog_no_thanks">NO, THANKS!</string>
+    <string name="dialog_no_thanks">NO, THANKS</string>
 
     <string name="dialog_title_new_category">New topic</string>
     <string name="dialog_hint_new_category">Enter topic title</string>
@@ -12,7 +12,7 @@
     <string name="dialog_message_category_are_you_sure">Are you sure you want to delete %s?</string>
     <string name="dialog_title_delete">Delete</string>
     <string name="dialog_message_are_you_sure">Are you sure?</string>
-    <string name="dialog_title_button_back">Changes are not saved!</string>
+    <string name="dialog_title_button_back">Changes are not saved</string>
     <string name="dialog_message_button_back_save">Do you want to save your changes?</string>
     <string name="dialog_button_delete">OK</string>
     <string name="dialog_button_cancel">@android:string/cancel</string>

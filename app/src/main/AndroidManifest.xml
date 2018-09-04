@@ -23,7 +23,7 @@
         <meta-data android:name="QUERY_LOG" android:value="true"/>
         <meta-data android:name="DOMAIN_PACKAGE_NAME" android:value="com.example.nicke.mojaevidencija"/>
 
-        <activity android:name=".MainActivity"
+        <activity android:name="com.milos.nicke.mojaevidencija.MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,15 +31,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CategoryDetailsActivity"
-            android:parentActivityName=".MainActivity"
+        <activity android:name="com.milos.nicke.mojaevidencija.CategoryDetailsActivity"
+            android:parentActivityName="com.milos.nicke.mojaevidencija.MainActivity"
             android:screenOrientation="portrait">
 
         </activity>
-        <activity android:name=".TaskDetailsActivity"
+        <activity android:name="com.milos.nicke.mojaevidencija.TaskDetailsActivity"
             android:screenOrientation="portrait"
             android:launchMode="singleTop"/>
-        <receiver android:name=".Util.AlarmReceiver" android:enabled="true"
+        <receiver android:name="com.milos.nicke.mojaevidencija.Util.AlarmReceiver" android:enabled="true"
             android:exported="true"
             android:theme="@style/AppTheme"
             android:permission="android.permission.RECEIVE_BOOT_COMPLETED">

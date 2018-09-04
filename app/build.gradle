@@ -18,7 +18,7 @@ repositories {
 android {
     compileSdkVersion 26
     defaultConfig {
-        applicationId "com.example.nicke.mojaevidencija"
+        applicationId "com.milos.nicke.mojaevidencija"
         minSdkVersion 16
         targetSdkVersion 26
         versionCode 1
@@ -29,6 +29,9 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            lintOptions {
+                disable 'MissingTranslation'
+            }
         }
     }
     sourceSets {
